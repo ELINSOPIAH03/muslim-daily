@@ -1,0 +1,27 @@
+@import "tailwindcss";
+@import "./scss/color";
+@import "./scss/font";
+
+* {
+  font-family: $ubuntu;
+}
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+}
+
+body {
+  margin: 0;
+}
+
+.font-arabic{
+  font-family: $amiri !important;
+  line-height: 1.8 !important;
+}
