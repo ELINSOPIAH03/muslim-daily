@@ -5,3 +5,12 @@ $ubuntu: 'Ubuntu', sans-serif;
 @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 $amiri: 'Amiri', sans-serif;
+
+* {
+    font-family: $ubuntu;
+}
+
+.font-arabic {
+    font-family: $amiri !important;
+    line-height: 1.8 !important;
+}
