@@ -272,7 +272,7 @@ export default function Home() {
                 <h1 className="text-3xl mb-15 font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl text-center sm:mb-20">
                     Jadwal Sholat
                 </h1>
-                <div className="flex flex-col sm:flex-row space-x-4">
+                <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row space-x-4">
                     {/* Kolom Kiri */}
                     <div className="w-full sm:w-3/5 space-y-4">
                         <div
