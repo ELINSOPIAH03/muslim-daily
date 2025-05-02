@@ -9,7 +9,7 @@ import NavbarHeader from "../components/NavbarHeader"
 import Footer from "../components/Footer"
 
 import { Ayat, JadwalSalat, AdminLevel } from '../types/home';
-import { convertHijriToArabicMonth, toArabicNumber, tampilkanJadwalSalat } from '../utils/home';
+import { convertHijriToArabicMonth, toArabicNumber, tampilkanJadwalSalat } from '../utils/utils';
 
 import mosqueImage from "../assets/images/mosque.jpg"
 import mapIcon from "../assets/icons/ic-maps.svg"
@@ -29,7 +29,7 @@ const data = [
     {
         id: 1,
         name: "Al-Qura'an Terjemah",
-        href: '#',
+        href: '/al-quran',
         imageSrc: alquranIcon,
     },
     {

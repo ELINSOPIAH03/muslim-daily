@@ -1,23 +1,23 @@
-$sage-colors: (
-    50: #F4F8F3,
-    100: #E9F1E7,
-    200: #D5E3D2,
-    300: #BFD1BA,
-    400: #ACC4AA,
-    500: #A8C3A6,
-    600: #8DA88B,
-    700: #6E866C,
-    800: #536851,
-    900: #3C4C3A,
-    950: #293529
-);
+// $sage-colors: (
+//     50: #F4F8F3,
+//     100: #E9F1E7,
+//     200: #D5E3D2,
+//     300: #BFD1BA,
+//     400: #ACC4AA,
+//     500: #A8C3A6,
+//     600: #8DA88B,
+//     700: #6E866C,
+//     800: #536851,
+//     900: #3C4C3A,
+//     950: #293529
+// );
 
-@each $key, $value in $sage-colors {
-    .bg-sage-#{$key} {
-        background-color: #{$value} !important;
-    }
+// @each $key, $value in $sage-colors {
+//     .bg-sage-#{$key} {
+//         background-color: #{$value} !important;
+//     }
 
-    .text-sage-#{$key} {
-        color: #{$value} !important;
-    }
-}
+//     .text-sage-#{$key} {
+//         color: #{$value} !important;
+//     }
+// }

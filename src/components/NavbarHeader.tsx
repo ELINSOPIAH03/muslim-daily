@@ -14,12 +14,12 @@ const navigation = [
     { name: 'Contact', href: '#' },
 ]
 
-export default function NavbarHeader() {
+export default function NavbarHeader({ bgClass = "bg-transparent" }) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="absolute inset-x-0 top-0 z-50">
-            <nav aria-label="Global" className="flex items-center justify-between p-6 lg:px-20">
+        <header className={`absolute inset-x-0 top-0 z-50 ${bgClass}`}>
+            <nav aria-label="Global" className="flex items-center justify-between p-6 sm:p-10 lg:px-20">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>

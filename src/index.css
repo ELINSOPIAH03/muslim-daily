@@ -1,5 +1,17 @@
 @import "tailwindcss";
-
+@theme {
+  --color-sage-50: #F4F8F3;
+  --color-sage-100: #E9F1E7;
+  --color-sage-200: #D5E3D2;
+  --color-sage-300: #BFD1BA;
+  --color-sage-400: #ACC4AA;
+  --color-sage-500: #A8C3A6; 
+  --color-sage-600: #8DA88B;
+  --color-sage-700: #6E866C;
+  --color-sage-800: #536851;
+  --color-sage-900: #3C4C3A;
+  --color-sage-950: #293529;
+}
 /* * {
   font-family: $ubuntu;
 } */
