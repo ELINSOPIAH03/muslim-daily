@@ -7,7 +7,7 @@ import LinkedinIcon from "../assets/icons/ic-linkedin.svg";
 const navigation = [
     { name: 'Home', href: '/' },
     { name: "Al-Qur'an", href: '/al-quran' },
-    { name: 'Al-Matsurat', href: '/al-matsurat' },
+    { name: "Al-Ma'tsurat", href: '/al-matsurat' },
     { name: 'Contact', href: '#' },
 ];
 

@@ -34,13 +34,13 @@ const data = [
     },
     {
         id: 2,
-        name: 'Al-Matsurat Pagi',
+        name: "Al-Ma'tsurat Pagi",
         href: '/al-matsurat/pagi',
         imageSrc: pagiIcon,
     },
     {
         id: 3,
-        name: 'Al-Matsurat Petang',
+        name: "Al-Ma'tsurat Petang",
         href: '/al-matsurat/petang',
         imageSrc: petangIcon,
     },
@@ -269,7 +269,7 @@ export default function Home() {
             </div>
 
             <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:mb-10 " id="jadwalSholat">
-                <h1 className="text-3xl mb-15 font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl text-center sm:mb-20">
+                <h1 className="text-3xl mb-15 font-semibold tracking-tight text-balance text-gray-900 sm:text-4xl text-center sm:mb-20">
                     Jadwal Sholat
                 </h1>
                 <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row space-x-4">
@@ -377,7 +377,7 @@ export default function Home() {
                 </div>
                 <div className="mx-auto max-w-6xl py-20 sm:py-30 lg:py-30">
                     <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:mb-20 ">
-                        <h1 className="text-3xl mb-15 font-semibold tracking-tight text-balance text-gray-900 sm:text-5xl text-center sm:mb-20">
+                        <h1 className="text-3xl mb-15 font-semibold tracking-tight text-balance text-gray-900 sm:text-4xl text-center sm:mb-20">
                             Dzikir & Tilawah Harian
                         </h1>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10 lg:gap-20">

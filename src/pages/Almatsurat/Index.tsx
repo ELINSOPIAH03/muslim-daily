@@ -7,13 +7,13 @@ import petangIcon from "../../assets/icons/ic-petang.svg"
 const data = [
     {
         id: 2,
-        name: 'Al-Matsurat Pagi',
+        name: "Al-Ma'tsurat Pagi",
         href: '/al-matsurat/pagi',
         imageSrc: pagiIcon,
     },
     {
         id: 3,
-        name: 'Al-Matsurat Petang',
+        name: "Al-Ma'tsurat Petang",
         href: '/al-matsurat/petang',
         imageSrc: petangIcon,
     },

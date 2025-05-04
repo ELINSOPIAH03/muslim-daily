@@ -10,7 +10,7 @@ import logo from "../assets/images/favicon.png"
 const navigation = [
     { name: 'Home', href: '/' },
     { name: "Al-Qur'an", href: '/al-quran' },
-    { name: 'Al-Matsurat', href: '/al-matsurat' },
+    { name: "Al-Ma'tsurat", href: '/al-matsurat' },
     { name: 'Contact', href: '#' },
 ]
 
