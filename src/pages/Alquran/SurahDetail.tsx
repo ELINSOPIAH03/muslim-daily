@@ -68,12 +68,12 @@ export default function SurahDetail() {
 
             <div className="pt-30 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:mb-10 space-y-7">
 
-                <div className="w-full flex justify-between items-center gap-4 mt-3 mb-3">
+                <div className="w-full flex justify-between items-center gap-4 mt-0 mb-2 sm:mt-3 sm:mb-3">
                     <p className="text-sm text-gray-500 w-full text-start">
                         {surah.revelationType === "Meccan" ? "Mekah" : "Madinah"}
                     </p>
                     {surah.number !== 1 && surah.number !== 9 && (
-                        <div className="font-arabic text-center text-xl w-full bg-contain bg-no-repeat bg-center flex items-center justify-center p-3"
+                        <div className="hidden sm:flex font-arabic text-center text-xl w-full bg-contain bg-no-repeat bg-center  items-center justify-center p-3"
                             style={{
                                 backgroundImage: `url(${borderIslamic})`,
                             }}>
@@ -84,6 +84,15 @@ export default function SurahDetail() {
                         {surah.numberOfAyahs} Ayat - {surah.name.replace(/^سُورَةُ /, '')}
                     </p>
                 </div>
+
+                {surah.number !== 1 && surah.number !== 9 && (
+                    <div className="flex sm:hidden font-arabic text-center text-2xl w-full bg-contain bg-no-repeat bg-center  items-center justify-center p-3"
+                        style={{
+                            backgroundImage: `url(${borderIslamic})`,
+                        }}>
+                        بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+                    </div>
+                )}
 
                 <div className="bg-sage-50 p-8 rounded-lg flex flex-col gap-4 w-full">
                     {surah.ayahs.map((ayah, index) => {
