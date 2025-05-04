@@ -35,13 +35,13 @@ const data = [
     {
         id: 2,
         name: 'Al-Matsurat Pagi',
-        href: '#',
+        href: '/al-matsurat/pagi',
         imageSrc: pagiIcon,
     },
     {
         id: 3,
         name: 'Al-Matsurat Petang',
-        href: '#',
+        href: '/al-matsurat/petang',
         imageSrc: petangIcon,
     },
 ]
