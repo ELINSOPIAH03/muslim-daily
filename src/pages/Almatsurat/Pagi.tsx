@@ -28,15 +28,6 @@ export default function Pagi() {
             .catch((err) => console.error('Gagal fetch:', err));
     }, []);
 
-    // const handleCount = (index: number) => {
-    //     setCounts((prevCounts) => {
-    //         const newCounts = [...prevCounts];
-    //         if (newCounts[index] < dzikirList[index].read) {
-    //             newCounts[index]++;
-    //         }
-    //         return newCounts;
-    //     });
-    // };
     const handleCount = (index: number) => {
         setCounts((prevCounts) => {
             const newCounts = [...prevCounts];
