@@ -235,7 +235,7 @@ export default function Home() {
                 </div>
                 <div className="mx-auto max-w-6xl py-32 sm:py-40 lg:py-50">
                     <div className="text-center">
-                        <h1 className="text-4xl font-semibold font-arabic tracking-tight text-balance text-gray-900 sm:text-5xl">
+                        <h1 className="text-4xl font-semibold font-arabic tracking-tight text-balance text-sage-900 sm:text-5xl">
                             {ayatArab}
                         </h1>
                         <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">

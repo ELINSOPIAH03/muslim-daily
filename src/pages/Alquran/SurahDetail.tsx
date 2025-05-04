@@ -1,5 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+
 
 import type { SurahDetail, Ayah } from "../../types/al-quran"
 import { toArabicNumber } from "../../utils/utils"
@@ -7,13 +8,29 @@ import { toArabicNumber } from "../../utils/utils"
 import NavbarHeader from "../../components/NavbarHeader"
 import Footer from "../../components/Footer"
 
-import borderIslamic from "../../assets/images/border-islamic.png"
+import { ArrowRightCircleIcon, ArrowLeftCircleIcon } from '@heroicons/react/24/solid'
+import borderIslamic from "../../assets/images/borderSage.png"
 import frameAyat from "../../assets/images/frame.png";
 
 export default function SurahDetail() {
     const { id } = useParams(); // Ambil ID dari URL
     const [surah, setSurah] = useState<SurahDetail | null>(null);
     const [translation, setTranslation] = useState<Ayah[]>([]);
+
+    const navigate = useNavigate();
+    const currentSurahNumber = Number(id);
+
+    const handlePrev = () => {
+        if (currentSurahNumber > 1) {
+            navigate(`/surah/${currentSurahNumber - 1}`);
+        }
+    };
+
+    const handleNext = () => {
+        if (currentSurahNumber < 114) {
+            navigate(`/surah/${currentSurahNumber + 1}`);
+        }
+    };
 
     const getSurahDetail = async () => {
         try {
@@ -36,6 +53,8 @@ export default function SurahDetail() {
     };
 
     useEffect(() => {
+        // window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo(0, 0);
         getSurahDetail();
         getTranslation();
     }, [id]);
@@ -47,28 +66,25 @@ export default function SurahDetail() {
         <div className="bg-white">
             <NavbarHeader bgClass="bg-sage-100" />
 
-            <div className="pt-30 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:mb-10 space-y-7 overflow-x-hidden">
-                <div className="mt-3 w-full bg-contain bg-no-repeat bg-center scale-x-150 h-[80px] "
-                    style={{
-                        backgroundImage: `url(${borderIslamic})`,
-                    }}>
+            <div className="pt-30 mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 sm:mb-10 space-y-7">
 
-                </div>
-
-                <div className="p-4 flex w-full justify-between">
-                    <p className="mb-2">
+                <div className="w-full flex justify-between items-center gap-4 mt-3 mb-3">
+                    <p className="text-sm text-gray-500 w-full text-start">
                         {surah.revelationType === "Meccan" ? "Mekah" : "Madinah"}
                     </p>
-                    <h1 className="text-xl font-bold mb-2">
-                        {surah.name.replace(/^سُورَةُ /, '')}
-                    </h1>
-                    <p className="mb-4">{surah.numberOfAyahs} Ayat</p>
-                </div>
-                {surah.number !== 1 && surah.number !== 9 && (
-                    <p className="font-arabic text-center text-xl mb-4">
-                        بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+                    {surah.number !== 1 && surah.number !== 9 && (
+                        <div className="font-arabic text-center text-xl w-full bg-contain bg-no-repeat bg-center flex items-center justify-center p-3"
+                            style={{
+                                backgroundImage: `url(${borderIslamic})`,
+                            }}>
+                            بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ
+                        </div>
+                    )}
+                    <p className="text-sm text-gray-500 font-arabic w-full text-end">
+                        {surah.numberOfAyahs} Ayat - {surah.name.replace(/^سُورَةُ /, '')}
                     </p>
-                )}
+                </div>
+
                 <div className="bg-sage-50 p-8 rounded-lg flex flex-col gap-4 w-full">
                     {surah.ayahs.map((ayah, index) => {
                         const isFirstAyah = ayah.numberInSurah === 1;
@@ -98,6 +114,31 @@ export default function SurahDetail() {
                         );
                     })}
                 </div>
+
+                <div className="flex justify-center items-center gap-7 mt-6">
+                    <button
+                        type="button"
+                        onClick={handlePrev}
+                        disabled={currentSurahNumber === 1}
+                        className={currentSurahNumber === 1 ? 'opacity-40 cursor-not-allowed' : ''}
+                    >
+                        <ArrowLeftCircleIcon aria-hidden="true" className="size-6 text-sage-700" />
+                    </button>
+
+                    <p className="text-lg sm:text-xl text-gray-900 font-arabic">
+                        {surah.name.replace(/^سُورَةُ /, '')}
+                    </p>
+
+                    <button
+                        type="button"
+                        onClick={handleNext}
+                        disabled={currentSurahNumber === 114}
+                        className={currentSurahNumber === 114 ? 'opacity-40 cursor-not-allowed' : ''}
+                    >
+                        <ArrowRightCircleIcon aria-hidden="true" className="size-6 text-sage-700" />
+                    </button>
+                </div>
+
             </div>
             <Footer />
         </div>
