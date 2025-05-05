@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 
 const Home = lazy(() => import('./pages/Home'));
+const Feedback = lazy(() => import('./pages/Feedback'));
 const AlQuran = lazy(() => import('./pages/Alquran/Index'));
 const AlMatsurat = lazy(() => import('./pages/Almatsurat/Index'));
 const DzikirPagi = lazy(() => import('./pages/Almatsurat/Pagi'));
@@ -16,6 +17,7 @@ function App() {
       <Suspense fallback={<div>Loading Dulu Gois...</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/feedback" element={<Feedback />} />
         <Route path="/al-quran" element={<AlQuran />} />
         <Route path="/al-matsurat" element={<AlMatsurat />} />
         <Route path="/al-matsurat/pagi" element={<DzikirPagi />} />
