@@ -8,7 +8,7 @@ const navigation = [
     { name: 'Home', href: '/' },
     { name: "Al-Qur'an", href: '/al-quran' },
     { name: "Al-Ma'tsurat", href: '/al-matsurat' },
-    { name: 'Contact', href: '#' },
+    // { name: 'Contact', href: '#' },
 ];
 
 export default function Footer() {
