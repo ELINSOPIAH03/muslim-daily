@@ -11,7 +11,7 @@ const navigation = [
     { name: 'Home', href: '/' },
     { name: "Al-Qur'an", href: '/al-quran' },
     { name: "Al-Ma'tsurat", href: '/al-matsurat' },
-    { name: 'Share Feedback', href: '/feedback' },
+    // { name: 'Share Feedback', href: '/feedback' },
 ]
 
 export default function NavbarHeader({ bgClass = "bg-transparent" }) {
